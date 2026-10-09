@@ -1,0 +1,7 @@
+Running: xsim.dir/Postsim_Test_func_impl/xsimk -simmode gui -wdb Postsim_Test_func_impl.wdb -simrunnum 0 -socket 45535
+Design successfully loaded
+Design Loading Memory Usage: 221036 KB (Peak: 221036 KB)
+Design Loading CPU Usage: 990 ms
+Simulation completed
+Simulation Memory Usage: 313688 KB (Peak: 360304 KB)
+Simulation CPU Usage: 5530 ms

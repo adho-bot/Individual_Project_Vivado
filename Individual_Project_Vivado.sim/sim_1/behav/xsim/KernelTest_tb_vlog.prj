@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../../../opt/2025.2/data/rsb/busdef" \
+"../../../../../Individual_Project/rtl/ALU_bitserial.sv" \
+"../../../../../Individual_Project/rtl/Array_main.sv" \
+"../../../../../Individual_Project/rtl/Control_Decode.sv" \
+"../../../../../Individual_Project/rtl/Control_FSM.sv" \
+"../../../../../Individual_Project/rtl/Control_unit.sv" \
+"../../../../../Individual_Project/rtl/PE_main.sv" \
+"../../../../../Individual_Project/rtl/Register_File.sv" \
+"../../../../../Individual_Project/rtl/Top.sv" \
+"../../../../../Individual_Project/sim/KernelTest_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

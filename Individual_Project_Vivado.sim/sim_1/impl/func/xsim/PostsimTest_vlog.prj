@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../../../../opt/2025.2/data/rsb/busdef" \
+"PostsimTest_func_impl.v" \
+
+sv xil_defaultlib  --include "../../../../../../../../opt/2025.2/data/rsb/busdef" \
+"../../../../../../Individual_Project/sim/Postsim_Test.sv" \
+
+# Do not sort compile order
+nosort

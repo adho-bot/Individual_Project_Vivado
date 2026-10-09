@@ -1,0 +1,16 @@
+0.7
+2020.2
+Nov 14 2025
+12:36:23
+/home/gary/Individual_Project/rtl/ALU_bitserial.sv,1774615085,systemVerilog,,/home/gary/Individual_Project/rtl/Array_main.sv,/home/gary/Individual_Project/rtl/Definitions.sv,ALU_bitserial,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Array_main.sv,1774615085,systemVerilog,,/home/gary/Individual_Project/rtl/Control_Decode.sv,,Array_Main,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Control_Decode.sv,1774615085,systemVerilog,,/home/gary/Individual_Project/rtl/Control_FSM.sv,/home/gary/Individual_Project/rtl/Definitions.sv,Control_Decode,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Control_FSM.sv,1774615085,systemVerilog,,/home/gary/Individual_Project/rtl/Control_unit.sv,/home/gary/Individual_Project/rtl/Definitions.sv,Control_FSM,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Control_unit.sv,1774615085,systemVerilog,,/home/gary/Individual_Project/rtl/PE_main.sv,/home/gary/Individual_Project/rtl/Definitions.sv,Control_Unit,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Definitions.sv,1774615085,verilog,,,,,,,,,,,,
+/home/gary/Individual_Project/rtl/PE_main.sv,1776544069,systemVerilog,,/home/gary/Individual_Project/rtl/Register_File.sv,,PE_Main,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Register_File.sv,1776160332,systemVerilog,,/home/gary/Individual_Project/rtl/Top.sv,,Register_File,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/rtl/Top.sv,1774626717,systemVerilog,,/home/gary/Individual_Project/sim/KernelTest_tb.sv,,Top,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/sim/KernelTest_tb.sv,1778517511,systemVerilog,,,/home/gary/Individual_Project/rtl/Definitions.sv,KernelTest_tb,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project/sim/Postsim_Test.sv,1776425886,systemVerilog,,,/home/gary/Individual_Project/rtl/Definitions.sv,PostsimTest,,uvm,../../../../../../../opt/2025.2/data/rsb/busdef,,,,,
+/home/gary/Individual_Project_Vivado/Individual_Project_Vivado.sim/sim_1/behav/xsim/glbl.v,1756381829,verilog,,,,glbl,,uvm,,,,,,

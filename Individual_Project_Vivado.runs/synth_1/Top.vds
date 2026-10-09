@@ -1,0 +1,1655 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Thu Apr 16 14:06:48 2026
+# Process ID         : 16711
+# Current directory  : /home/gary/Individual_Project_Vivado/Individual_Project_Vivado.runs/synth_1
+# Command line       : vivado -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
+# Log file           : /home/gary/Individual_Project_Vivado/Individual_Project_Vivado.runs/synth_1/Top.vds
+# Journal file       : /home/gary/Individual_Project_Vivado/Individual_Project_Vivado.runs/synth_1/vivado.jou
+# Running On         : gary-IdeaPad-Slim-5-Light-14ABR8
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 7 7730U with Radeon Graphics
+# CPU Frequency      : 1736.049 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 14479 MB
+# Swap memory        : 4294 MB
+# Total Virtual      : 18774 MB
+# Available Virtual  : 11881 MB
+#-----------------------------------------------------------
+source Top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/gary/Individual_Project/ip/ipTop'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/2025.2/data/ip'.
+Command: read_checkpoint -auto_incremental -incremental /home/gary/Individual_Project_Vivado/Individual_Project_Vivado.srcs/utils_1/imports/synth_1/Top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/gary/Individual_Project_Vivado/Individual_Project_Vivado.srcs/utils_1/imports/synth_1/Top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top Top -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 16753
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2045.133 ; gain = 417.672 ; free physical = 217 ; free virtual = 10246
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top' [/home/gary/Individual_Project/rtl/Top.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'Array_Main' [/home/gary/Individual_Project/rtl/Array_main.sv:4]
+	Parameter ROWS bound to: 32'sb00000000000000000000000000010000 
+	Parameter COLS bound to: 32'sb00000000000000000000000000010000 
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter REG_DEPTH bound to: 32'sb00000000000000000000000000001000 
+	Parameter ARRAY_BASE_ADDR bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'PE_Main' [/home/gary/Individual_Project/rtl/PE_main.sv:2]
+	Parameter DATA_WIDTH bound to: 16 - type: integer 
+	Parameter REG_DEPTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'Register_File' [/home/gary/Individual_Project/rtl/Register_File.sv:2]
+	Parameter DEPTH bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'Register_File' (0#1) [/home/gary/Individual_Project/rtl/Register_File.sv:2]
+INFO: [Synth 8-6157] synthesizing module 'ALU_bitserial' [/home/gary/Individual_Project/rtl/ALU_bitserial.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_bitserial' (0#1) [/home/gary/Individual_Project/rtl/ALU_bitserial.sv:6]
+INFO: [Synth 8-226] default block is never used [/home/gary/Individual_Project/rtl/PE_main.sv:107]
+INFO: [Synth 8-6155] done synthesizing module 'PE_Main' (0#1) [/home/gary/Individual_Project/rtl/PE_main.sv:2]
+INFO: [Synth 8-6155] done synthesizing module 'Array_Main' (0#1) [/home/gary/Individual_Project/rtl/Array_main.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'Control_Unit' [/home/gary/Individual_Project/rtl/Control_unit.sv:4]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000010000 
+	Parameter REG_DEPTH bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-6157] synthesizing module 'Control_FSM' [/home/gary/Individual_Project/rtl/Control_FSM.sv:4]
+	Parameter DATA_WIDTH bound to: 32'sb00000000000000000000000000010000 
+INFO: [Synth 8-226] default block is never used [/home/gary/Individual_Project/rtl/Control_FSM.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'Control_FSM' (0#1) [/home/gary/Individual_Project/rtl/Control_FSM.sv:4]
+INFO: [Synth 8-6157] synthesizing module 'Control_Decode' [/home/gary/Individual_Project/rtl/Control_Decode.sv:6]
+	Parameter REG_DEPTH bound to: 32'sb00000000000000000000000000001000 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/gary/Individual_Project/rtl/Control_Decode.sv:73]
+INFO: [Synth 8-6155] done synthesizing module 'Control_Decode' (0#1) [/home/gary/Individual_Project/rtl/Control_Decode.sv:6]
+INFO: [Synth 8-6155] done synthesizing module 'Control_Unit' (0#1) [/home/gary/Individual_Project/rtl/Control_unit.sv:4]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (0#1) [/home/gary/Individual_Project/rtl/Top.sv:1]
+WARNING: [Synth 8-3917] design Top has port o_array_address[31] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[30] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[29] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[28] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[27] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[26] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[25] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[24] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[23] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[22] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[21] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[20] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[19] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[18] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[17] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[16] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[15] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[10] driven by constant 0
+WARNING: [Synth 8-7129] Port i_instruction[19] in module Control_Decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[18] in module Control_Decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[1] in module Control_Decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[0] in module Control_Decode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[19] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[18] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[17] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[16] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[15] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[14] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[13] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[12] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[11] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[10] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[9] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[8] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[7] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[6] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[5] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[4] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[3] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[2] in module Control_FSM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_rstn in module Register_File is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2157.070 ; gain = 529.609 ; free physical = 198 ; free virtual = 10131
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2165.977 ; gain = 538.516 ; free physical = 215 ; free virtual = 10148
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2165.977 ; gain = 538.516 ; free physical = 216 ; free virtual = 10148
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'o_state_reg' in module 'Control_FSM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE3 |                         00000001 |                             0001
+                 iSTATE0 |                         10000000 |                             1000
+                  iSTATE |                         00000010 |                             0111
+                 iSTATE1 |                         00000100 |                             0010
+                 iSTATE2 |                         01000000 |                             0011
+                 iSTATE6 |                         00010000 |                             0101
+                 iSTATE5 |                         00001000 |                             0110
+                 iSTATE4 |                         00100000 |                             0100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'o_state_reg' using encoding 'one-hot' in module 'Control_FSM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 2190.898 ; gain = 563.438 ; free physical = 167 ; free virtual = 10125
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 257   
++---XORs : 
+	   2 Input      1 Bit         XORs := 768   
++---Registers : 
+	               16 Bit    Registers := 1     
+	                5 Bit    Registers := 1     
+	                1 Bit    Registers := 256   
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 1     
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 5     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 769   
+	   4 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 2     
+	   8 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   8 Input    2 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 266   
+	   2 Input    1 Bit        Muxes := 1025  
+	   4 Input    1 Bit        Muxes := 256   
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3917] design Top has port o_array_address[31] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[30] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[29] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[28] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[27] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[26] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[25] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[24] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[23] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[22] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[21] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[20] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[19] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[18] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[17] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[16] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[15] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[14] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[13] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[12] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[11] driven by constant 0
+WARNING: [Synth 8-3917] design Top has port o_array_address[10] driven by constant 0
+WARNING: [Synth 8-7129] Port i_instruction[19] in module Top is either unconnected or has no load
+WARNING: [Synth 8-7129] Port i_instruction[18] in module Top is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2471.484 ; gain = 844.023 ; free physical = 152 ; free virtual = 9936
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++------------+-------------------------------+----------------+----------------------+----------------+
+|Module Name | RTL Object                    | Inference      | Size (Depth x Width) | Primitives     | 
++------------+-------------------------------+----------------+----------------------+----------------+
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
++------------+-------------------------------+----------------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 2471.484 ; gain = 844.023 ; free physical = 153 ; free virtual = 9937
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++------------+-------------------------------+----------------+----------------------+----------------+
+|Module Name | RTL Object                    | Inference      | Size (Depth x Width) | Primitives     | 
++------------+-------------------------------+----------------+----------------------+----------------+
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
+|PE_Main:    | register_file_inst/rf_mem_reg | User Attribute | 128 x 1              | RAM128X1D x 2  | 
++------------+-------------------------------+----------------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2471.484 ; gain = 844.023 ; free physical = 153 ; free virtual = 9937
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 191 ; free virtual = 9877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 191 ; free virtual = 9877
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 184 ; free virtual = 9870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 184 ; free virtual = 9870
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 180 ; free virtual = 9866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 180 ; free virtual = 9866
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |BUFG      |     1|
+|2     |LUT1      |     1|
+|3     |LUT2      |    14|
+|4     |LUT3      |   100|
+|5     |LUT4      |   624|
+|6     |LUT5      |   400|
+|7     |LUT6      |  1221|
+|8     |RAM128X1D |   512|
+|9     |FDCE      |   349|
+|10    |FDPE      |     1|
+|11    |IBUF      |    37|
+|12    |OBUF      |    51|
++------+----------+------+
+
+Report Instance Areas: 
++------+-----------------------------------+------------------+------+
+|      |Instance                           |Module            |Cells |
++------+-----------------------------------+------------------+------+
+|1     |top                                |                  |  3311|
+|2     |  array_inst                       |Array_Main        |  1028|
+|3     |    \gen_row[0].gen_col[0].pe_i    |PE_Main           |     5|
+|4     |      alu_inst                     |ALU_bitserial_763 |     1|
+|5     |      register_file_inst           |Register_File_764 |     4|
+|6     |    \gen_row[0].gen_col[10].pe_i   |PE_Main_0         |     5|
+|7     |      alu_inst                     |ALU_bitserial_761 |     1|
+|8     |      register_file_inst           |Register_File_762 |     4|
+|9     |    \gen_row[0].gen_col[11].pe_i   |PE_Main_1         |     5|
+|10    |      alu_inst                     |ALU_bitserial_759 |     1|
+|11    |      register_file_inst           |Register_File_760 |     4|
+|12    |    \gen_row[0].gen_col[12].pe_i   |PE_Main_2         |     5|
+|13    |      alu_inst                     |ALU_bitserial_757 |     1|
+|14    |      register_file_inst           |Register_File_758 |     4|
+|15    |    \gen_row[0].gen_col[13].pe_i   |PE_Main_3         |     5|
+|16    |      alu_inst                     |ALU_bitserial_755 |     1|
+|17    |      register_file_inst           |Register_File_756 |     4|
+|18    |    \gen_row[0].gen_col[14].pe_i   |PE_Main_4         |     3|
+|19    |      alu_inst                     |ALU_bitserial_753 |     1|
+|20    |      register_file_inst           |Register_File_754 |     2|
+|21    |    \gen_row[0].gen_col[15].pe_i   |PE_Main_5         |     3|
+|22    |      alu_inst                     |ALU_bitserial_751 |     1|
+|23    |      register_file_inst           |Register_File_752 |     2|
+|24    |    \gen_row[0].gen_col[1].pe_i    |PE_Main_6         |     5|
+|25    |      alu_inst                     |ALU_bitserial_749 |     1|
+|26    |      register_file_inst           |Register_File_750 |     4|
+|27    |    \gen_row[0].gen_col[2].pe_i    |PE_Main_7         |     5|
+|28    |      alu_inst                     |ALU_bitserial_747 |     1|
+|29    |      register_file_inst           |Register_File_748 |     4|
+|30    |    \gen_row[0].gen_col[3].pe_i    |PE_Main_8         |     5|
+|31    |      alu_inst                     |ALU_bitserial_745 |     1|
+|32    |      register_file_inst           |Register_File_746 |     4|
+|33    |    \gen_row[0].gen_col[4].pe_i    |PE_Main_9         |     5|
+|34    |      alu_inst                     |ALU_bitserial_743 |     1|
+|35    |      register_file_inst           |Register_File_744 |     4|
+|36    |    \gen_row[0].gen_col[5].pe_i    |PE_Main_10        |     5|
+|37    |      alu_inst                     |ALU_bitserial_741 |     1|
+|38    |      register_file_inst           |Register_File_742 |     4|
+|39    |    \gen_row[0].gen_col[6].pe_i    |PE_Main_11        |     5|
+|40    |      alu_inst                     |ALU_bitserial_739 |     1|
+|41    |      register_file_inst           |Register_File_740 |     4|
+|42    |    \gen_row[0].gen_col[7].pe_i    |PE_Main_12        |     5|
+|43    |      alu_inst                     |ALU_bitserial_737 |     1|
+|44    |      register_file_inst           |Register_File_738 |     4|
+|45    |    \gen_row[0].gen_col[8].pe_i    |PE_Main_13        |     5|
+|46    |      alu_inst                     |ALU_bitserial_735 |     1|
+|47    |      register_file_inst           |Register_File_736 |     4|
+|48    |    \gen_row[0].gen_col[9].pe_i    |PE_Main_14        |     5|
+|49    |      alu_inst                     |ALU_bitserial_733 |     1|
+|50    |      register_file_inst           |Register_File_734 |     4|
+|51    |    \gen_row[10].gen_col[0].pe_i   |PE_Main_15        |     3|
+|52    |      alu_inst                     |ALU_bitserial_731 |     1|
+|53    |      register_file_inst           |Register_File_732 |     2|
+|54    |    \gen_row[10].gen_col[10].pe_i  |PE_Main_16        |     3|
+|55    |      alu_inst                     |ALU_bitserial_729 |     1|
+|56    |      register_file_inst           |Register_File_730 |     2|
+|57    |    \gen_row[10].gen_col[11].pe_i  |PE_Main_17        |     3|
+|58    |      alu_inst                     |ALU_bitserial_727 |     1|
+|59    |      register_file_inst           |Register_File_728 |     2|
+|60    |    \gen_row[10].gen_col[12].pe_i  |PE_Main_18        |     3|
+|61    |      alu_inst                     |ALU_bitserial_725 |     1|
+|62    |      register_file_inst           |Register_File_726 |     2|
+|63    |    \gen_row[10].gen_col[13].pe_i  |PE_Main_19        |     3|
+|64    |      alu_inst                     |ALU_bitserial_723 |     1|
+|65    |      register_file_inst           |Register_File_724 |     2|
+|66    |    \gen_row[10].gen_col[14].pe_i  |PE_Main_20        |     5|
+|67    |      alu_inst                     |ALU_bitserial_721 |     1|
+|68    |      register_file_inst           |Register_File_722 |     4|
+|69    |    \gen_row[10].gen_col[15].pe_i  |PE_Main_21        |     3|
+|70    |      alu_inst                     |ALU_bitserial_719 |     1|
+|71    |      register_file_inst           |Register_File_720 |     2|
+|72    |    \gen_row[10].gen_col[1].pe_i   |PE_Main_22        |     3|
+|73    |      alu_inst                     |ALU_bitserial_717 |     1|
+|74    |      register_file_inst           |Register_File_718 |     2|
+|75    |    \gen_row[10].gen_col[2].pe_i   |PE_Main_23        |     3|
+|76    |      alu_inst                     |ALU_bitserial_715 |     1|
+|77    |      register_file_inst           |Register_File_716 |     2|
+|78    |    \gen_row[10].gen_col[3].pe_i   |PE_Main_24        |     3|
+|79    |      alu_inst                     |ALU_bitserial_713 |     1|
+|80    |      register_file_inst           |Register_File_714 |     2|
+|81    |    \gen_row[10].gen_col[4].pe_i   |PE_Main_25        |     3|
+|82    |      alu_inst                     |ALU_bitserial_711 |     1|
+|83    |      register_file_inst           |Register_File_712 |     2|
+|84    |    \gen_row[10].gen_col[5].pe_i   |PE_Main_26        |     3|
+|85    |      alu_inst                     |ALU_bitserial_709 |     1|
+|86    |      register_file_inst           |Register_File_710 |     2|
+|87    |    \gen_row[10].gen_col[6].pe_i   |PE_Main_27        |     3|
+|88    |      alu_inst                     |ALU_bitserial_707 |     1|
+|89    |      register_file_inst           |Register_File_708 |     2|
+|90    |    \gen_row[10].gen_col[7].pe_i   |PE_Main_28        |     3|
+|91    |      alu_inst                     |ALU_bitserial_705 |     1|
+|92    |      register_file_inst           |Register_File_706 |     2|
+|93    |    \gen_row[10].gen_col[8].pe_i   |PE_Main_29        |     3|
+|94    |      alu_inst                     |ALU_bitserial_703 |     1|
+|95    |      register_file_inst           |Register_File_704 |     2|
+|96    |    \gen_row[10].gen_col[9].pe_i   |PE_Main_30        |     3|
+|97    |      alu_inst                     |ALU_bitserial_701 |     1|
+|98    |      register_file_inst           |Register_File_702 |     2|
+|99    |    \gen_row[11].gen_col[0].pe_i   |PE_Main_31        |     3|
+|100   |      alu_inst                     |ALU_bitserial_699 |     1|
+|101   |      register_file_inst           |Register_File_700 |     2|
+|102   |    \gen_row[11].gen_col[10].pe_i  |PE_Main_32        |     3|
+|103   |      alu_inst                     |ALU_bitserial_697 |     1|
+|104   |      register_file_inst           |Register_File_698 |     2|
+|105   |    \gen_row[11].gen_col[11].pe_i  |PE_Main_33        |     3|
+|106   |      alu_inst                     |ALU_bitserial_695 |     1|
+|107   |      register_file_inst           |Register_File_696 |     2|
+|108   |    \gen_row[11].gen_col[12].pe_i  |PE_Main_34        |     3|
+|109   |      alu_inst                     |ALU_bitserial_693 |     1|
+|110   |      register_file_inst           |Register_File_694 |     2|
+|111   |    \gen_row[11].gen_col[13].pe_i  |PE_Main_35        |     3|
+|112   |      alu_inst                     |ALU_bitserial_691 |     1|
+|113   |      register_file_inst           |Register_File_692 |     2|
+|114   |    \gen_row[11].gen_col[14].pe_i  |PE_Main_36        |     5|
+|115   |      alu_inst                     |ALU_bitserial_689 |     1|
+|116   |      register_file_inst           |Register_File_690 |     4|
+|117   |    \gen_row[11].gen_col[15].pe_i  |PE_Main_37        |     3|
+|118   |      alu_inst                     |ALU_bitserial_687 |     1|
+|119   |      register_file_inst           |Register_File_688 |     2|
+|120   |    \gen_row[11].gen_col[1].pe_i   |PE_Main_38        |     3|
+|121   |      alu_inst                     |ALU_bitserial_685 |     1|
+|122   |      register_file_inst           |Register_File_686 |     2|
+|123   |    \gen_row[11].gen_col[2].pe_i   |PE_Main_39        |     3|
+|124   |      alu_inst                     |ALU_bitserial_683 |     1|
+|125   |      register_file_inst           |Register_File_684 |     2|
+|126   |    \gen_row[11].gen_col[3].pe_i   |PE_Main_40        |     3|
+|127   |      alu_inst                     |ALU_bitserial_681 |     1|
+|128   |      register_file_inst           |Register_File_682 |     2|
+|129   |    \gen_row[11].gen_col[4].pe_i   |PE_Main_41        |     3|
+|130   |      alu_inst                     |ALU_bitserial_679 |     1|
+|131   |      register_file_inst           |Register_File_680 |     2|
+|132   |    \gen_row[11].gen_col[5].pe_i   |PE_Main_42        |     3|
+|133   |      alu_inst                     |ALU_bitserial_677 |     1|
+|134   |      register_file_inst           |Register_File_678 |     2|
+|135   |    \gen_row[11].gen_col[6].pe_i   |PE_Main_43        |     3|
+|136   |      alu_inst                     |ALU_bitserial_675 |     1|
+|137   |      register_file_inst           |Register_File_676 |     2|
+|138   |    \gen_row[11].gen_col[7].pe_i   |PE_Main_44        |     3|
+|139   |      alu_inst                     |ALU_bitserial_673 |     1|
+|140   |      register_file_inst           |Register_File_674 |     2|
+|141   |    \gen_row[11].gen_col[8].pe_i   |PE_Main_45        |     3|
+|142   |      alu_inst                     |ALU_bitserial_671 |     1|
+|143   |      register_file_inst           |Register_File_672 |     2|
+|144   |    \gen_row[11].gen_col[9].pe_i   |PE_Main_46        |     3|
+|145   |      alu_inst                     |ALU_bitserial_669 |     1|
+|146   |      register_file_inst           |Register_File_670 |     2|
+|147   |    \gen_row[12].gen_col[0].pe_i   |PE_Main_47        |     3|
+|148   |      alu_inst                     |ALU_bitserial_667 |     1|
+|149   |      register_file_inst           |Register_File_668 |     2|
+|150   |    \gen_row[12].gen_col[10].pe_i  |PE_Main_48        |     3|
+|151   |      alu_inst                     |ALU_bitserial_665 |     1|
+|152   |      register_file_inst           |Register_File_666 |     2|
+|153   |    \gen_row[12].gen_col[11].pe_i  |PE_Main_49        |     3|
+|154   |      alu_inst                     |ALU_bitserial_663 |     1|
+|155   |      register_file_inst           |Register_File_664 |     2|
+|156   |    \gen_row[12].gen_col[12].pe_i  |PE_Main_50        |     3|
+|157   |      alu_inst                     |ALU_bitserial_661 |     1|
+|158   |      register_file_inst           |Register_File_662 |     2|
+|159   |    \gen_row[12].gen_col[13].pe_i  |PE_Main_51        |     3|
+|160   |      alu_inst                     |ALU_bitserial_659 |     1|
+|161   |      register_file_inst           |Register_File_660 |     2|
+|162   |    \gen_row[12].gen_col[14].pe_i  |PE_Main_52        |     5|
+|163   |      alu_inst                     |ALU_bitserial_657 |     1|
+|164   |      register_file_inst           |Register_File_658 |     4|
+|165   |    \gen_row[12].gen_col[15].pe_i  |PE_Main_53        |     3|
+|166   |      alu_inst                     |ALU_bitserial_655 |     1|
+|167   |      register_file_inst           |Register_File_656 |     2|
+|168   |    \gen_row[12].gen_col[1].pe_i   |PE_Main_54        |     3|
+|169   |      alu_inst                     |ALU_bitserial_653 |     1|
+|170   |      register_file_inst           |Register_File_654 |     2|
+|171   |    \gen_row[12].gen_col[2].pe_i   |PE_Main_55        |     3|
+|172   |      alu_inst                     |ALU_bitserial_651 |     1|
+|173   |      register_file_inst           |Register_File_652 |     2|
+|174   |    \gen_row[12].gen_col[3].pe_i   |PE_Main_56        |     3|
+|175   |      alu_inst                     |ALU_bitserial_649 |     1|
+|176   |      register_file_inst           |Register_File_650 |     2|
+|177   |    \gen_row[12].gen_col[4].pe_i   |PE_Main_57        |     3|
+|178   |      alu_inst                     |ALU_bitserial_647 |     1|
+|179   |      register_file_inst           |Register_File_648 |     2|
+|180   |    \gen_row[12].gen_col[5].pe_i   |PE_Main_58        |     3|
+|181   |      alu_inst                     |ALU_bitserial_645 |     1|
+|182   |      register_file_inst           |Register_File_646 |     2|
+|183   |    \gen_row[12].gen_col[6].pe_i   |PE_Main_59        |     3|
+|184   |      alu_inst                     |ALU_bitserial_643 |     1|
+|185   |      register_file_inst           |Register_File_644 |     2|
+|186   |    \gen_row[12].gen_col[7].pe_i   |PE_Main_60        |     3|
+|187   |      alu_inst                     |ALU_bitserial_641 |     1|
+|188   |      register_file_inst           |Register_File_642 |     2|
+|189   |    \gen_row[12].gen_col[8].pe_i   |PE_Main_61        |     3|
+|190   |      alu_inst                     |ALU_bitserial_639 |     1|
+|191   |      register_file_inst           |Register_File_640 |     2|
+|192   |    \gen_row[12].gen_col[9].pe_i   |PE_Main_62        |     3|
+|193   |      alu_inst                     |ALU_bitserial_637 |     1|
+|194   |      register_file_inst           |Register_File_638 |     2|
+|195   |    \gen_row[13].gen_col[0].pe_i   |PE_Main_63        |     3|
+|196   |      alu_inst                     |ALU_bitserial_635 |     1|
+|197   |      register_file_inst           |Register_File_636 |     2|
+|198   |    \gen_row[13].gen_col[10].pe_i  |PE_Main_64        |     3|
+|199   |      alu_inst                     |ALU_bitserial_633 |     1|
+|200   |      register_file_inst           |Register_File_634 |     2|
+|201   |    \gen_row[13].gen_col[11].pe_i  |PE_Main_65        |     3|
+|202   |      alu_inst                     |ALU_bitserial_631 |     1|
+|203   |      register_file_inst           |Register_File_632 |     2|
+|204   |    \gen_row[13].gen_col[12].pe_i  |PE_Main_66        |     3|
+|205   |      alu_inst                     |ALU_bitserial_629 |     1|
+|206   |      register_file_inst           |Register_File_630 |     2|
+|207   |    \gen_row[13].gen_col[13].pe_i  |PE_Main_67        |     3|
+|208   |      alu_inst                     |ALU_bitserial_627 |     1|
+|209   |      register_file_inst           |Register_File_628 |     2|
+|210   |    \gen_row[13].gen_col[14].pe_i  |PE_Main_68        |     5|
+|211   |      alu_inst                     |ALU_bitserial_625 |     1|
+|212   |      register_file_inst           |Register_File_626 |     4|
+|213   |    \gen_row[13].gen_col[15].pe_i  |PE_Main_69        |     3|
+|214   |      alu_inst                     |ALU_bitserial_623 |     1|
+|215   |      register_file_inst           |Register_File_624 |     2|
+|216   |    \gen_row[13].gen_col[1].pe_i   |PE_Main_70        |     3|
+|217   |      alu_inst                     |ALU_bitserial_621 |     1|
+|218   |      register_file_inst           |Register_File_622 |     2|
+|219   |    \gen_row[13].gen_col[2].pe_i   |PE_Main_71        |     3|
+|220   |      alu_inst                     |ALU_bitserial_619 |     1|
+|221   |      register_file_inst           |Register_File_620 |     2|
+|222   |    \gen_row[13].gen_col[3].pe_i   |PE_Main_72        |     3|
+|223   |      alu_inst                     |ALU_bitserial_617 |     1|
+|224   |      register_file_inst           |Register_File_618 |     2|
+|225   |    \gen_row[13].gen_col[4].pe_i   |PE_Main_73        |     3|
+|226   |      alu_inst                     |ALU_bitserial_615 |     1|
+|227   |      register_file_inst           |Register_File_616 |     2|
+|228   |    \gen_row[13].gen_col[5].pe_i   |PE_Main_74        |     3|
+|229   |      alu_inst                     |ALU_bitserial_613 |     1|
+|230   |      register_file_inst           |Register_File_614 |     2|
+|231   |    \gen_row[13].gen_col[6].pe_i   |PE_Main_75        |     3|
+|232   |      alu_inst                     |ALU_bitserial_611 |     1|
+|233   |      register_file_inst           |Register_File_612 |     2|
+|234   |    \gen_row[13].gen_col[7].pe_i   |PE_Main_76        |     3|
+|235   |      alu_inst                     |ALU_bitserial_609 |     1|
+|236   |      register_file_inst           |Register_File_610 |     2|
+|237   |    \gen_row[13].gen_col[8].pe_i   |PE_Main_77        |     3|
+|238   |      alu_inst                     |ALU_bitserial_607 |     1|
+|239   |      register_file_inst           |Register_File_608 |     2|
+|240   |    \gen_row[13].gen_col[9].pe_i   |PE_Main_78        |     3|
+|241   |      alu_inst                     |ALU_bitserial_605 |     1|
+|242   |      register_file_inst           |Register_File_606 |     2|
+|243   |    \gen_row[14].gen_col[0].pe_i   |PE_Main_79        |     3|
+|244   |      alu_inst                     |ALU_bitserial_603 |     1|
+|245   |      register_file_inst           |Register_File_604 |     2|
+|246   |    \gen_row[14].gen_col[10].pe_i  |PE_Main_80        |     3|
+|247   |      alu_inst                     |ALU_bitserial_601 |     1|
+|248   |      register_file_inst           |Register_File_602 |     2|
+|249   |    \gen_row[14].gen_col[11].pe_i  |PE_Main_81        |     3|
+|250   |      alu_inst                     |ALU_bitserial_599 |     1|
+|251   |      register_file_inst           |Register_File_600 |     2|
+|252   |    \gen_row[14].gen_col[12].pe_i  |PE_Main_82        |     3|
+|253   |      alu_inst                     |ALU_bitserial_597 |     1|
+|254   |      register_file_inst           |Register_File_598 |     2|
+|255   |    \gen_row[14].gen_col[13].pe_i  |PE_Main_83        |     3|
+|256   |      alu_inst                     |ALU_bitserial_595 |     1|
+|257   |      register_file_inst           |Register_File_596 |     2|
+|258   |    \gen_row[14].gen_col[14].pe_i  |PE_Main_84        |     5|
+|259   |      alu_inst                     |ALU_bitserial_593 |     1|
+|260   |      register_file_inst           |Register_File_594 |     4|
+|261   |    \gen_row[14].gen_col[15].pe_i  |PE_Main_85        |     3|
+|262   |      alu_inst                     |ALU_bitserial_591 |     1|
+|263   |      register_file_inst           |Register_File_592 |     2|
+|264   |    \gen_row[14].gen_col[1].pe_i   |PE_Main_86        |     3|
+|265   |      alu_inst                     |ALU_bitserial_589 |     1|
+|266   |      register_file_inst           |Register_File_590 |     2|
+|267   |    \gen_row[14].gen_col[2].pe_i   |PE_Main_87        |     3|
+|268   |      alu_inst                     |ALU_bitserial_587 |     1|
+|269   |      register_file_inst           |Register_File_588 |     2|
+|270   |    \gen_row[14].gen_col[3].pe_i   |PE_Main_88        |     3|
+|271   |      alu_inst                     |ALU_bitserial_585 |     1|
+|272   |      register_file_inst           |Register_File_586 |     2|
+|273   |    \gen_row[14].gen_col[4].pe_i   |PE_Main_89        |     3|
+|274   |      alu_inst                     |ALU_bitserial_583 |     1|
+|275   |      register_file_inst           |Register_File_584 |     2|
+|276   |    \gen_row[14].gen_col[5].pe_i   |PE_Main_90        |     3|
+|277   |      alu_inst                     |ALU_bitserial_581 |     1|
+|278   |      register_file_inst           |Register_File_582 |     2|
+|279   |    \gen_row[14].gen_col[6].pe_i   |PE_Main_91        |     3|
+|280   |      alu_inst                     |ALU_bitserial_579 |     1|
+|281   |      register_file_inst           |Register_File_580 |     2|
+|282   |    \gen_row[14].gen_col[7].pe_i   |PE_Main_92        |     3|
+|283   |      alu_inst                     |ALU_bitserial_577 |     1|
+|284   |      register_file_inst           |Register_File_578 |     2|
+|285   |    \gen_row[14].gen_col[8].pe_i   |PE_Main_93        |     3|
+|286   |      alu_inst                     |ALU_bitserial_575 |     1|
+|287   |      register_file_inst           |Register_File_576 |     2|
+|288   |    \gen_row[14].gen_col[9].pe_i   |PE_Main_94        |     3|
+|289   |      alu_inst                     |ALU_bitserial_573 |     1|
+|290   |      register_file_inst           |Register_File_574 |     2|
+|291   |    \gen_row[15].gen_col[0].pe_i   |PE_Main_95        |     3|
+|292   |      alu_inst                     |ALU_bitserial_571 |     1|
+|293   |      register_file_inst           |Register_File_572 |     2|
+|294   |    \gen_row[15].gen_col[10].pe_i  |PE_Main_96        |     3|
+|295   |      alu_inst                     |ALU_bitserial_569 |     1|
+|296   |      register_file_inst           |Register_File_570 |     2|
+|297   |    \gen_row[15].gen_col[11].pe_i  |PE_Main_97        |     3|
+|298   |      alu_inst                     |ALU_bitserial_567 |     1|
+|299   |      register_file_inst           |Register_File_568 |     2|
+|300   |    \gen_row[15].gen_col[12].pe_i  |PE_Main_98        |     3|
+|301   |      alu_inst                     |ALU_bitserial_565 |     1|
+|302   |      register_file_inst           |Register_File_566 |     2|
+|303   |    \gen_row[15].gen_col[13].pe_i  |PE_Main_99        |     3|
+|304   |      alu_inst                     |ALU_bitserial_563 |     1|
+|305   |      register_file_inst           |Register_File_564 |     2|
+|306   |    \gen_row[15].gen_col[14].pe_i  |PE_Main_100       |     4|
+|307   |      alu_inst                     |ALU_bitserial_561 |     2|
+|308   |      register_file_inst           |Register_File_562 |     2|
+|309   |    \gen_row[15].gen_col[15].pe_i  |PE_Main_101       |     3|
+|310   |      alu_inst                     |ALU_bitserial_559 |     1|
+|311   |      register_file_inst           |Register_File_560 |     2|
+|312   |    \gen_row[15].gen_col[1].pe_i   |PE_Main_102       |     3|
+|313   |      alu_inst                     |ALU_bitserial_557 |     1|
+|314   |      register_file_inst           |Register_File_558 |     2|
+|315   |    \gen_row[15].gen_col[2].pe_i   |PE_Main_103       |     3|
+|316   |      alu_inst                     |ALU_bitserial_555 |     1|
+|317   |      register_file_inst           |Register_File_556 |     2|
+|318   |    \gen_row[15].gen_col[3].pe_i   |PE_Main_104       |     3|
+|319   |      alu_inst                     |ALU_bitserial_553 |     1|
+|320   |      register_file_inst           |Register_File_554 |     2|
+|321   |    \gen_row[15].gen_col[4].pe_i   |PE_Main_105       |     3|
+|322   |      alu_inst                     |ALU_bitserial_551 |     1|
+|323   |      register_file_inst           |Register_File_552 |     2|
+|324   |    \gen_row[15].gen_col[5].pe_i   |PE_Main_106       |     3|
+|325   |      alu_inst                     |ALU_bitserial_549 |     1|
+|326   |      register_file_inst           |Register_File_550 |     2|
+|327   |    \gen_row[15].gen_col[6].pe_i   |PE_Main_107       |     3|
+|328   |      alu_inst                     |ALU_bitserial_547 |     1|
+|329   |      register_file_inst           |Register_File_548 |     2|
+|330   |    \gen_row[15].gen_col[7].pe_i   |PE_Main_108       |     3|
+|331   |      alu_inst                     |ALU_bitserial_545 |     1|
+|332   |      register_file_inst           |Register_File_546 |     2|
+|333   |    \gen_row[15].gen_col[8].pe_i   |PE_Main_109       |     3|
+|334   |      alu_inst                     |ALU_bitserial_543 |     1|
+|335   |      register_file_inst           |Register_File_544 |     2|
+|336   |    \gen_row[15].gen_col[9].pe_i   |PE_Main_110       |     3|
+|337   |      alu_inst                     |ALU_bitserial_541 |     1|
+|338   |      register_file_inst           |Register_File_542 |     2|
+|339   |    \gen_row[1].gen_col[0].pe_i    |PE_Main_111       |     3|
+|340   |      alu_inst                     |ALU_bitserial_539 |     1|
+|341   |      register_file_inst           |Register_File_540 |     2|
+|342   |    \gen_row[1].gen_col[10].pe_i   |PE_Main_112       |     3|
+|343   |      alu_inst                     |ALU_bitserial_537 |     1|
+|344   |      register_file_inst           |Register_File_538 |     2|
+|345   |    \gen_row[1].gen_col[11].pe_i   |PE_Main_113       |     3|
+|346   |      alu_inst                     |ALU_bitserial_535 |     1|
+|347   |      register_file_inst           |Register_File_536 |     2|
+|348   |    \gen_row[1].gen_col[12].pe_i   |PE_Main_114       |     3|
+|349   |      alu_inst                     |ALU_bitserial_533 |     1|
+|350   |      register_file_inst           |Register_File_534 |     2|
+|351   |    \gen_row[1].gen_col[13].pe_i   |PE_Main_115       |     3|
+|352   |      alu_inst                     |ALU_bitserial_531 |     1|
+|353   |      register_file_inst           |Register_File_532 |     2|
+|354   |    \gen_row[1].gen_col[14].pe_i   |PE_Main_116       |     5|
+|355   |      alu_inst                     |ALU_bitserial_529 |     1|
+|356   |      register_file_inst           |Register_File_530 |     4|
+|357   |    \gen_row[1].gen_col[15].pe_i   |PE_Main_117       |     3|
+|358   |      alu_inst                     |ALU_bitserial_527 |     1|
+|359   |      register_file_inst           |Register_File_528 |     2|
+|360   |    \gen_row[1].gen_col[1].pe_i    |PE_Main_118       |     3|
+|361   |      alu_inst                     |ALU_bitserial_525 |     1|
+|362   |      register_file_inst           |Register_File_526 |     2|
+|363   |    \gen_row[1].gen_col[2].pe_i    |PE_Main_119       |     3|
+|364   |      alu_inst                     |ALU_bitserial_523 |     1|
+|365   |      register_file_inst           |Register_File_524 |     2|
+|366   |    \gen_row[1].gen_col[3].pe_i    |PE_Main_120       |     3|
+|367   |      alu_inst                     |ALU_bitserial_521 |     1|
+|368   |      register_file_inst           |Register_File_522 |     2|
+|369   |    \gen_row[1].gen_col[4].pe_i    |PE_Main_121       |     3|
+|370   |      alu_inst                     |ALU_bitserial_519 |     1|
+|371   |      register_file_inst           |Register_File_520 |     2|
+|372   |    \gen_row[1].gen_col[5].pe_i    |PE_Main_122       |     3|
+|373   |      alu_inst                     |ALU_bitserial_517 |     1|
+|374   |      register_file_inst           |Register_File_518 |     2|
+|375   |    \gen_row[1].gen_col[6].pe_i    |PE_Main_123       |     3|
+|376   |      alu_inst                     |ALU_bitserial_515 |     1|
+|377   |      register_file_inst           |Register_File_516 |     2|
+|378   |    \gen_row[1].gen_col[7].pe_i    |PE_Main_124       |     3|
+|379   |      alu_inst                     |ALU_bitserial_513 |     1|
+|380   |      register_file_inst           |Register_File_514 |     2|
+|381   |    \gen_row[1].gen_col[8].pe_i    |PE_Main_125       |     3|
+|382   |      alu_inst                     |ALU_bitserial_511 |     1|
+|383   |      register_file_inst           |Register_File_512 |     2|
+|384   |    \gen_row[1].gen_col[9].pe_i    |PE_Main_126       |     3|
+|385   |      alu_inst                     |ALU_bitserial_509 |     1|
+|386   |      register_file_inst           |Register_File_510 |     2|
+|387   |    \gen_row[2].gen_col[0].pe_i    |PE_Main_127       |     3|
+|388   |      alu_inst                     |ALU_bitserial_507 |     1|
+|389   |      register_file_inst           |Register_File_508 |     2|
+|390   |    \gen_row[2].gen_col[10].pe_i   |PE_Main_128       |     3|
+|391   |      alu_inst                     |ALU_bitserial_505 |     1|
+|392   |      register_file_inst           |Register_File_506 |     2|
+|393   |    \gen_row[2].gen_col[11].pe_i   |PE_Main_129       |     3|
+|394   |      alu_inst                     |ALU_bitserial_503 |     1|
+|395   |      register_file_inst           |Register_File_504 |     2|
+|396   |    \gen_row[2].gen_col[12].pe_i   |PE_Main_130       |     3|
+|397   |      alu_inst                     |ALU_bitserial_501 |     1|
+|398   |      register_file_inst           |Register_File_502 |     2|
+|399   |    \gen_row[2].gen_col[13].pe_i   |PE_Main_131       |     3|
+|400   |      alu_inst                     |ALU_bitserial_499 |     1|
+|401   |      register_file_inst           |Register_File_500 |     2|
+|402   |    \gen_row[2].gen_col[14].pe_i   |PE_Main_132       |     5|
+|403   |      alu_inst                     |ALU_bitserial_497 |     1|
+|404   |      register_file_inst           |Register_File_498 |     4|
+|405   |    \gen_row[2].gen_col[15].pe_i   |PE_Main_133       |     3|
+|406   |      alu_inst                     |ALU_bitserial_495 |     1|
+|407   |      register_file_inst           |Register_File_496 |     2|
+|408   |    \gen_row[2].gen_col[1].pe_i    |PE_Main_134       |     3|
+|409   |      alu_inst                     |ALU_bitserial_493 |     1|
+|410   |      register_file_inst           |Register_File_494 |     2|
+|411   |    \gen_row[2].gen_col[2].pe_i    |PE_Main_135       |     3|
+|412   |      alu_inst                     |ALU_bitserial_491 |     1|
+|413   |      register_file_inst           |Register_File_492 |     2|
+|414   |    \gen_row[2].gen_col[3].pe_i    |PE_Main_136       |     3|
+|415   |      alu_inst                     |ALU_bitserial_489 |     1|
+|416   |      register_file_inst           |Register_File_490 |     2|
+|417   |    \gen_row[2].gen_col[4].pe_i    |PE_Main_137       |     3|
+|418   |      alu_inst                     |ALU_bitserial_487 |     1|
+|419   |      register_file_inst           |Register_File_488 |     2|
+|420   |    \gen_row[2].gen_col[5].pe_i    |PE_Main_138       |     3|
+|421   |      alu_inst                     |ALU_bitserial_485 |     1|
+|422   |      register_file_inst           |Register_File_486 |     2|
+|423   |    \gen_row[2].gen_col[6].pe_i    |PE_Main_139       |     3|
+|424   |      alu_inst                     |ALU_bitserial_483 |     1|
+|425   |      register_file_inst           |Register_File_484 |     2|
+|426   |    \gen_row[2].gen_col[7].pe_i    |PE_Main_140       |     3|
+|427   |      alu_inst                     |ALU_bitserial_481 |     1|
+|428   |      register_file_inst           |Register_File_482 |     2|
+|429   |    \gen_row[2].gen_col[8].pe_i    |PE_Main_141       |     3|
+|430   |      alu_inst                     |ALU_bitserial_479 |     1|
+|431   |      register_file_inst           |Register_File_480 |     2|
+|432   |    \gen_row[2].gen_col[9].pe_i    |PE_Main_142       |     3|
+|433   |      alu_inst                     |ALU_bitserial_477 |     1|
+|434   |      register_file_inst           |Register_File_478 |     2|
+|435   |    \gen_row[3].gen_col[0].pe_i    |PE_Main_143       |     3|
+|436   |      alu_inst                     |ALU_bitserial_475 |     1|
+|437   |      register_file_inst           |Register_File_476 |     2|
+|438   |    \gen_row[3].gen_col[10].pe_i   |PE_Main_144       |     3|
+|439   |      alu_inst                     |ALU_bitserial_473 |     1|
+|440   |      register_file_inst           |Register_File_474 |     2|
+|441   |    \gen_row[3].gen_col[11].pe_i   |PE_Main_145       |     3|
+|442   |      alu_inst                     |ALU_bitserial_471 |     1|
+|443   |      register_file_inst           |Register_File_472 |     2|
+|444   |    \gen_row[3].gen_col[12].pe_i   |PE_Main_146       |     3|
+|445   |      alu_inst                     |ALU_bitserial_469 |     1|
+|446   |      register_file_inst           |Register_File_470 |     2|
+|447   |    \gen_row[3].gen_col[13].pe_i   |PE_Main_147       |     3|
+|448   |      alu_inst                     |ALU_bitserial_467 |     1|
+|449   |      register_file_inst           |Register_File_468 |     2|
+|450   |    \gen_row[3].gen_col[14].pe_i   |PE_Main_148       |     5|
+|451   |      alu_inst                     |ALU_bitserial_465 |     1|
+|452   |      register_file_inst           |Register_File_466 |     4|
+|453   |    \gen_row[3].gen_col[15].pe_i   |PE_Main_149       |     3|
+|454   |      alu_inst                     |ALU_bitserial_463 |     1|
+|455   |      register_file_inst           |Register_File_464 |     2|
+|456   |    \gen_row[3].gen_col[1].pe_i    |PE_Main_150       |     3|
+|457   |      alu_inst                     |ALU_bitserial_461 |     1|
+|458   |      register_file_inst           |Register_File_462 |     2|
+|459   |    \gen_row[3].gen_col[2].pe_i    |PE_Main_151       |     3|
+|460   |      alu_inst                     |ALU_bitserial_459 |     1|
+|461   |      register_file_inst           |Register_File_460 |     2|
+|462   |    \gen_row[3].gen_col[3].pe_i    |PE_Main_152       |     3|
+|463   |      alu_inst                     |ALU_bitserial_457 |     1|
+|464   |      register_file_inst           |Register_File_458 |     2|
+|465   |    \gen_row[3].gen_col[4].pe_i    |PE_Main_153       |     3|
+|466   |      alu_inst                     |ALU_bitserial_455 |     1|
+|467   |      register_file_inst           |Register_File_456 |     2|
+|468   |    \gen_row[3].gen_col[5].pe_i    |PE_Main_154       |     3|
+|469   |      alu_inst                     |ALU_bitserial_453 |     1|
+|470   |      register_file_inst           |Register_File_454 |     2|
+|471   |    \gen_row[3].gen_col[6].pe_i    |PE_Main_155       |     3|
+|472   |      alu_inst                     |ALU_bitserial_451 |     1|
+|473   |      register_file_inst           |Register_File_452 |     2|
+|474   |    \gen_row[3].gen_col[7].pe_i    |PE_Main_156       |     3|
+|475   |      alu_inst                     |ALU_bitserial_449 |     1|
+|476   |      register_file_inst           |Register_File_450 |     2|
+|477   |    \gen_row[3].gen_col[8].pe_i    |PE_Main_157       |     3|
+|478   |      alu_inst                     |ALU_bitserial_447 |     1|
+|479   |      register_file_inst           |Register_File_448 |     2|
+|480   |    \gen_row[3].gen_col[9].pe_i    |PE_Main_158       |     3|
+|481   |      alu_inst                     |ALU_bitserial_445 |     1|
+|482   |      register_file_inst           |Register_File_446 |     2|
+|483   |    \gen_row[4].gen_col[0].pe_i    |PE_Main_159       |     3|
+|484   |      alu_inst                     |ALU_bitserial_443 |     1|
+|485   |      register_file_inst           |Register_File_444 |     2|
+|486   |    \gen_row[4].gen_col[10].pe_i   |PE_Main_160       |     3|
+|487   |      alu_inst                     |ALU_bitserial_441 |     1|
+|488   |      register_file_inst           |Register_File_442 |     2|
+|489   |    \gen_row[4].gen_col[11].pe_i   |PE_Main_161       |     3|
+|490   |      alu_inst                     |ALU_bitserial_439 |     1|
+|491   |      register_file_inst           |Register_File_440 |     2|
+|492   |    \gen_row[4].gen_col[12].pe_i   |PE_Main_162       |     3|
+|493   |      alu_inst                     |ALU_bitserial_437 |     1|
+|494   |      register_file_inst           |Register_File_438 |     2|
+|495   |    \gen_row[4].gen_col[13].pe_i   |PE_Main_163       |     3|
+|496   |      alu_inst                     |ALU_bitserial_435 |     1|
+|497   |      register_file_inst           |Register_File_436 |     2|
+|498   |    \gen_row[4].gen_col[14].pe_i   |PE_Main_164       |     5|
+|499   |      alu_inst                     |ALU_bitserial_433 |     1|
+|500   |      register_file_inst           |Register_File_434 |     4|
+|501   |    \gen_row[4].gen_col[15].pe_i   |PE_Main_165       |     3|
+|502   |      alu_inst                     |ALU_bitserial_431 |     1|
+|503   |      register_file_inst           |Register_File_432 |     2|
+|504   |    \gen_row[4].gen_col[1].pe_i    |PE_Main_166       |     3|
+|505   |      alu_inst                     |ALU_bitserial_429 |     1|
+|506   |      register_file_inst           |Register_File_430 |     2|
+|507   |    \gen_row[4].gen_col[2].pe_i    |PE_Main_167       |     3|
+|508   |      alu_inst                     |ALU_bitserial_427 |     1|
+|509   |      register_file_inst           |Register_File_428 |     2|
+|510   |    \gen_row[4].gen_col[3].pe_i    |PE_Main_168       |     3|
+|511   |      alu_inst                     |ALU_bitserial_425 |     1|
+|512   |      register_file_inst           |Register_File_426 |     2|
+|513   |    \gen_row[4].gen_col[4].pe_i    |PE_Main_169       |     3|
+|514   |      alu_inst                     |ALU_bitserial_423 |     1|
+|515   |      register_file_inst           |Register_File_424 |     2|
+|516   |    \gen_row[4].gen_col[5].pe_i    |PE_Main_170       |     3|
+|517   |      alu_inst                     |ALU_bitserial_421 |     1|
+|518   |      register_file_inst           |Register_File_422 |     2|
+|519   |    \gen_row[4].gen_col[6].pe_i    |PE_Main_171       |     3|
+|520   |      alu_inst                     |ALU_bitserial_419 |     1|
+|521   |      register_file_inst           |Register_File_420 |     2|
+|522   |    \gen_row[4].gen_col[7].pe_i    |PE_Main_172       |     3|
+|523   |      alu_inst                     |ALU_bitserial_417 |     1|
+|524   |      register_file_inst           |Register_File_418 |     2|
+|525   |    \gen_row[4].gen_col[8].pe_i    |PE_Main_173       |     3|
+|526   |      alu_inst                     |ALU_bitserial_415 |     1|
+|527   |      register_file_inst           |Register_File_416 |     2|
+|528   |    \gen_row[4].gen_col[9].pe_i    |PE_Main_174       |     3|
+|529   |      alu_inst                     |ALU_bitserial_413 |     1|
+|530   |      register_file_inst           |Register_File_414 |     2|
+|531   |    \gen_row[5].gen_col[0].pe_i    |PE_Main_175       |     3|
+|532   |      alu_inst                     |ALU_bitserial_411 |     1|
+|533   |      register_file_inst           |Register_File_412 |     2|
+|534   |    \gen_row[5].gen_col[10].pe_i   |PE_Main_176       |     3|
+|535   |      alu_inst                     |ALU_bitserial_409 |     1|
+|536   |      register_file_inst           |Register_File_410 |     2|
+|537   |    \gen_row[5].gen_col[11].pe_i   |PE_Main_177       |     3|
+|538   |      alu_inst                     |ALU_bitserial_407 |     1|
+|539   |      register_file_inst           |Register_File_408 |     2|
+|540   |    \gen_row[5].gen_col[12].pe_i   |PE_Main_178       |     3|
+|541   |      alu_inst                     |ALU_bitserial_405 |     1|
+|542   |      register_file_inst           |Register_File_406 |     2|
+|543   |    \gen_row[5].gen_col[13].pe_i   |PE_Main_179       |     3|
+|544   |      alu_inst                     |ALU_bitserial_403 |     1|
+|545   |      register_file_inst           |Register_File_404 |     2|
+|546   |    \gen_row[5].gen_col[14].pe_i   |PE_Main_180       |     5|
+|547   |      alu_inst                     |ALU_bitserial_401 |     1|
+|548   |      register_file_inst           |Register_File_402 |     4|
+|549   |    \gen_row[5].gen_col[15].pe_i   |PE_Main_181       |     3|
+|550   |      alu_inst                     |ALU_bitserial_399 |     1|
+|551   |      register_file_inst           |Register_File_400 |     2|
+|552   |    \gen_row[5].gen_col[1].pe_i    |PE_Main_182       |     3|
+|553   |      alu_inst                     |ALU_bitserial_397 |     1|
+|554   |      register_file_inst           |Register_File_398 |     2|
+|555   |    \gen_row[5].gen_col[2].pe_i    |PE_Main_183       |     3|
+|556   |      alu_inst                     |ALU_bitserial_395 |     1|
+|557   |      register_file_inst           |Register_File_396 |     2|
+|558   |    \gen_row[5].gen_col[3].pe_i    |PE_Main_184       |     3|
+|559   |      alu_inst                     |ALU_bitserial_393 |     1|
+|560   |      register_file_inst           |Register_File_394 |     2|
+|561   |    \gen_row[5].gen_col[4].pe_i    |PE_Main_185       |     3|
+|562   |      alu_inst                     |ALU_bitserial_391 |     1|
+|563   |      register_file_inst           |Register_File_392 |     2|
+|564   |    \gen_row[5].gen_col[5].pe_i    |PE_Main_186       |     3|
+|565   |      alu_inst                     |ALU_bitserial_389 |     1|
+|566   |      register_file_inst           |Register_File_390 |     2|
+|567   |    \gen_row[5].gen_col[6].pe_i    |PE_Main_187       |     3|
+|568   |      alu_inst                     |ALU_bitserial_387 |     1|
+|569   |      register_file_inst           |Register_File_388 |     2|
+|570   |    \gen_row[5].gen_col[7].pe_i    |PE_Main_188       |     3|
+|571   |      alu_inst                     |ALU_bitserial_385 |     1|
+|572   |      register_file_inst           |Register_File_386 |     2|
+|573   |    \gen_row[5].gen_col[8].pe_i    |PE_Main_189       |     3|
+|574   |      alu_inst                     |ALU_bitserial_383 |     1|
+|575   |      register_file_inst           |Register_File_384 |     2|
+|576   |    \gen_row[5].gen_col[9].pe_i    |PE_Main_190       |     3|
+|577   |      alu_inst                     |ALU_bitserial_381 |     1|
+|578   |      register_file_inst           |Register_File_382 |     2|
+|579   |    \gen_row[6].gen_col[0].pe_i    |PE_Main_191       |     3|
+|580   |      alu_inst                     |ALU_bitserial_379 |     1|
+|581   |      register_file_inst           |Register_File_380 |     2|
+|582   |    \gen_row[6].gen_col[10].pe_i   |PE_Main_192       |     3|
+|583   |      alu_inst                     |ALU_bitserial_377 |     1|
+|584   |      register_file_inst           |Register_File_378 |     2|
+|585   |    \gen_row[6].gen_col[11].pe_i   |PE_Main_193       |     3|
+|586   |      alu_inst                     |ALU_bitserial_375 |     1|
+|587   |      register_file_inst           |Register_File_376 |     2|
+|588   |    \gen_row[6].gen_col[12].pe_i   |PE_Main_194       |     3|
+|589   |      alu_inst                     |ALU_bitserial_373 |     1|
+|590   |      register_file_inst           |Register_File_374 |     2|
+|591   |    \gen_row[6].gen_col[13].pe_i   |PE_Main_195       |     3|
+|592   |      alu_inst                     |ALU_bitserial_371 |     1|
+|593   |      register_file_inst           |Register_File_372 |     2|
+|594   |    \gen_row[6].gen_col[14].pe_i   |PE_Main_196       |     5|
+|595   |      alu_inst                     |ALU_bitserial_369 |     1|
+|596   |      register_file_inst           |Register_File_370 |     4|
+|597   |    \gen_row[6].gen_col[15].pe_i   |PE_Main_197       |     3|
+|598   |      alu_inst                     |ALU_bitserial_367 |     1|
+|599   |      register_file_inst           |Register_File_368 |     2|
+|600   |    \gen_row[6].gen_col[1].pe_i    |PE_Main_198       |     3|
+|601   |      alu_inst                     |ALU_bitserial_365 |     1|
+|602   |      register_file_inst           |Register_File_366 |     2|
+|603   |    \gen_row[6].gen_col[2].pe_i    |PE_Main_199       |     3|
+|604   |      alu_inst                     |ALU_bitserial_363 |     1|
+|605   |      register_file_inst           |Register_File_364 |     2|
+|606   |    \gen_row[6].gen_col[3].pe_i    |PE_Main_200       |     3|
+|607   |      alu_inst                     |ALU_bitserial_361 |     1|
+|608   |      register_file_inst           |Register_File_362 |     2|
+|609   |    \gen_row[6].gen_col[4].pe_i    |PE_Main_201       |     3|
+|610   |      alu_inst                     |ALU_bitserial_359 |     1|
+|611   |      register_file_inst           |Register_File_360 |     2|
+|612   |    \gen_row[6].gen_col[5].pe_i    |PE_Main_202       |     3|
+|613   |      alu_inst                     |ALU_bitserial_357 |     1|
+|614   |      register_file_inst           |Register_File_358 |     2|
+|615   |    \gen_row[6].gen_col[6].pe_i    |PE_Main_203       |     3|
+|616   |      alu_inst                     |ALU_bitserial_355 |     1|
+|617   |      register_file_inst           |Register_File_356 |     2|
+|618   |    \gen_row[6].gen_col[7].pe_i    |PE_Main_204       |     3|
+|619   |      alu_inst                     |ALU_bitserial_353 |     1|
+|620   |      register_file_inst           |Register_File_354 |     2|
+|621   |    \gen_row[6].gen_col[8].pe_i    |PE_Main_205       |     3|
+|622   |      alu_inst                     |ALU_bitserial_351 |     1|
+|623   |      register_file_inst           |Register_File_352 |     2|
+|624   |    \gen_row[6].gen_col[9].pe_i    |PE_Main_206       |     3|
+|625   |      alu_inst                     |ALU_bitserial_349 |     1|
+|626   |      register_file_inst           |Register_File_350 |     2|
+|627   |    \gen_row[7].gen_col[0].pe_i    |PE_Main_207       |     3|
+|628   |      alu_inst                     |ALU_bitserial_347 |     1|
+|629   |      register_file_inst           |Register_File_348 |     2|
+|630   |    \gen_row[7].gen_col[10].pe_i   |PE_Main_208       |     3|
+|631   |      alu_inst                     |ALU_bitserial_345 |     1|
+|632   |      register_file_inst           |Register_File_346 |     2|
+|633   |    \gen_row[7].gen_col[11].pe_i   |PE_Main_209       |     3|
+|634   |      alu_inst                     |ALU_bitserial_343 |     1|
+|635   |      register_file_inst           |Register_File_344 |     2|
+|636   |    \gen_row[7].gen_col[12].pe_i   |PE_Main_210       |     3|
+|637   |      alu_inst                     |ALU_bitserial_341 |     1|
+|638   |      register_file_inst           |Register_File_342 |     2|
+|639   |    \gen_row[7].gen_col[13].pe_i   |PE_Main_211       |     3|
+|640   |      alu_inst                     |ALU_bitserial_339 |     1|
+|641   |      register_file_inst           |Register_File_340 |     2|
+|642   |    \gen_row[7].gen_col[14].pe_i   |PE_Main_212       |     5|
+|643   |      alu_inst                     |ALU_bitserial_337 |     1|
+|644   |      register_file_inst           |Register_File_338 |     4|
+|645   |    \gen_row[7].gen_col[15].pe_i   |PE_Main_213       |     3|
+|646   |      alu_inst                     |ALU_bitserial_335 |     1|
+|647   |      register_file_inst           |Register_File_336 |     2|
+|648   |    \gen_row[7].gen_col[1].pe_i    |PE_Main_214       |     3|
+|649   |      alu_inst                     |ALU_bitserial_333 |     1|
+|650   |      register_file_inst           |Register_File_334 |     2|
+|651   |    \gen_row[7].gen_col[2].pe_i    |PE_Main_215       |     3|
+|652   |      alu_inst                     |ALU_bitserial_331 |     1|
+|653   |      register_file_inst           |Register_File_332 |     2|
+|654   |    \gen_row[7].gen_col[3].pe_i    |PE_Main_216       |     3|
+|655   |      alu_inst                     |ALU_bitserial_329 |     1|
+|656   |      register_file_inst           |Register_File_330 |     2|
+|657   |    \gen_row[7].gen_col[4].pe_i    |PE_Main_217       |     3|
+|658   |      alu_inst                     |ALU_bitserial_327 |     1|
+|659   |      register_file_inst           |Register_File_328 |     2|
+|660   |    \gen_row[7].gen_col[5].pe_i    |PE_Main_218       |     3|
+|661   |      alu_inst                     |ALU_bitserial_325 |     1|
+|662   |      register_file_inst           |Register_File_326 |     2|
+|663   |    \gen_row[7].gen_col[6].pe_i    |PE_Main_219       |     3|
+|664   |      alu_inst                     |ALU_bitserial_323 |     1|
+|665   |      register_file_inst           |Register_File_324 |     2|
+|666   |    \gen_row[7].gen_col[7].pe_i    |PE_Main_220       |     3|
+|667   |      alu_inst                     |ALU_bitserial_321 |     1|
+|668   |      register_file_inst           |Register_File_322 |     2|
+|669   |    \gen_row[7].gen_col[8].pe_i    |PE_Main_221       |     3|
+|670   |      alu_inst                     |ALU_bitserial_319 |     1|
+|671   |      register_file_inst           |Register_File_320 |     2|
+|672   |    \gen_row[7].gen_col[9].pe_i    |PE_Main_222       |     3|
+|673   |      alu_inst                     |ALU_bitserial_317 |     1|
+|674   |      register_file_inst           |Register_File_318 |     2|
+|675   |    \gen_row[8].gen_col[0].pe_i    |PE_Main_223       |     3|
+|676   |      alu_inst                     |ALU_bitserial_315 |     1|
+|677   |      register_file_inst           |Register_File_316 |     2|
+|678   |    \gen_row[8].gen_col[10].pe_i   |PE_Main_224       |     3|
+|679   |      alu_inst                     |ALU_bitserial_313 |     1|
+|680   |      register_file_inst           |Register_File_314 |     2|
+|681   |    \gen_row[8].gen_col[11].pe_i   |PE_Main_225       |     3|
+|682   |      alu_inst                     |ALU_bitserial_311 |     1|
+|683   |      register_file_inst           |Register_File_312 |     2|
+|684   |    \gen_row[8].gen_col[12].pe_i   |PE_Main_226       |     3|
+|685   |      alu_inst                     |ALU_bitserial_309 |     1|
+|686   |      register_file_inst           |Register_File_310 |     2|
+|687   |    \gen_row[8].gen_col[13].pe_i   |PE_Main_227       |     3|
+|688   |      alu_inst                     |ALU_bitserial_307 |     1|
+|689   |      register_file_inst           |Register_File_308 |     2|
+|690   |    \gen_row[8].gen_col[14].pe_i   |PE_Main_228       |     5|
+|691   |      alu_inst                     |ALU_bitserial_305 |     1|
+|692   |      register_file_inst           |Register_File_306 |     4|
+|693   |    \gen_row[8].gen_col[15].pe_i   |PE_Main_229       |     3|
+|694   |      alu_inst                     |ALU_bitserial_303 |     1|
+|695   |      register_file_inst           |Register_File_304 |     2|
+|696   |    \gen_row[8].gen_col[1].pe_i    |PE_Main_230       |     3|
+|697   |      alu_inst                     |ALU_bitserial_301 |     1|
+|698   |      register_file_inst           |Register_File_302 |     2|
+|699   |    \gen_row[8].gen_col[2].pe_i    |PE_Main_231       |     3|
+|700   |      alu_inst                     |ALU_bitserial_299 |     1|
+|701   |      register_file_inst           |Register_File_300 |     2|
+|702   |    \gen_row[8].gen_col[3].pe_i    |PE_Main_232       |     3|
+|703   |      alu_inst                     |ALU_bitserial_297 |     1|
+|704   |      register_file_inst           |Register_File_298 |     2|
+|705   |    \gen_row[8].gen_col[4].pe_i    |PE_Main_233       |     3|
+|706   |      alu_inst                     |ALU_bitserial_295 |     1|
+|707   |      register_file_inst           |Register_File_296 |     2|
+|708   |    \gen_row[8].gen_col[5].pe_i    |PE_Main_234       |     3|
+|709   |      alu_inst                     |ALU_bitserial_293 |     1|
+|710   |      register_file_inst           |Register_File_294 |     2|
+|711   |    \gen_row[8].gen_col[6].pe_i    |PE_Main_235       |     3|
+|712   |      alu_inst                     |ALU_bitserial_291 |     1|
+|713   |      register_file_inst           |Register_File_292 |     2|
+|714   |    \gen_row[8].gen_col[7].pe_i    |PE_Main_236       |     3|
+|715   |      alu_inst                     |ALU_bitserial_289 |     1|
+|716   |      register_file_inst           |Register_File_290 |     2|
+|717   |    \gen_row[8].gen_col[8].pe_i    |PE_Main_237       |     3|
+|718   |      alu_inst                     |ALU_bitserial_287 |     1|
+|719   |      register_file_inst           |Register_File_288 |     2|
+|720   |    \gen_row[8].gen_col[9].pe_i    |PE_Main_238       |     3|
+|721   |      alu_inst                     |ALU_bitserial_285 |     1|
+|722   |      register_file_inst           |Register_File_286 |     2|
+|723   |    \gen_row[9].gen_col[0].pe_i    |PE_Main_239       |     3|
+|724   |      alu_inst                     |ALU_bitserial_283 |     1|
+|725   |      register_file_inst           |Register_File_284 |     2|
+|726   |    \gen_row[9].gen_col[10].pe_i   |PE_Main_240       |     3|
+|727   |      alu_inst                     |ALU_bitserial_281 |     1|
+|728   |      register_file_inst           |Register_File_282 |     2|
+|729   |    \gen_row[9].gen_col[11].pe_i   |PE_Main_241       |     3|
+|730   |      alu_inst                     |ALU_bitserial_279 |     1|
+|731   |      register_file_inst           |Register_File_280 |     2|
+|732   |    \gen_row[9].gen_col[12].pe_i   |PE_Main_242       |     3|
+|733   |      alu_inst                     |ALU_bitserial_277 |     1|
+|734   |      register_file_inst           |Register_File_278 |     2|
+|735   |    \gen_row[9].gen_col[13].pe_i   |PE_Main_243       |     3|
+|736   |      alu_inst                     |ALU_bitserial_275 |     1|
+|737   |      register_file_inst           |Register_File_276 |     2|
+|738   |    \gen_row[9].gen_col[14].pe_i   |PE_Main_244       |     5|
+|739   |      alu_inst                     |ALU_bitserial_273 |     1|
+|740   |      register_file_inst           |Register_File_274 |     4|
+|741   |    \gen_row[9].gen_col[15].pe_i   |PE_Main_245       |     3|
+|742   |      alu_inst                     |ALU_bitserial_271 |     1|
+|743   |      register_file_inst           |Register_File_272 |     2|
+|744   |    \gen_row[9].gen_col[1].pe_i    |PE_Main_246       |     3|
+|745   |      alu_inst                     |ALU_bitserial_269 |     1|
+|746   |      register_file_inst           |Register_File_270 |     2|
+|747   |    \gen_row[9].gen_col[2].pe_i    |PE_Main_247       |     3|
+|748   |      alu_inst                     |ALU_bitserial_267 |     1|
+|749   |      register_file_inst           |Register_File_268 |     2|
+|750   |    \gen_row[9].gen_col[3].pe_i    |PE_Main_248       |     3|
+|751   |      alu_inst                     |ALU_bitserial_265 |     1|
+|752   |      register_file_inst           |Register_File_266 |     2|
+|753   |    \gen_row[9].gen_col[4].pe_i    |PE_Main_249       |     3|
+|754   |      alu_inst                     |ALU_bitserial_263 |     1|
+|755   |      register_file_inst           |Register_File_264 |     2|
+|756   |    \gen_row[9].gen_col[5].pe_i    |PE_Main_250       |     3|
+|757   |      alu_inst                     |ALU_bitserial_261 |     1|
+|758   |      register_file_inst           |Register_File_262 |     2|
+|759   |    \gen_row[9].gen_col[6].pe_i    |PE_Main_251       |     3|
+|760   |      alu_inst                     |ALU_bitserial_259 |     1|
+|761   |      register_file_inst           |Register_File_260 |     2|
+|762   |    \gen_row[9].gen_col[7].pe_i    |PE_Main_252       |     3|
+|763   |      alu_inst                     |ALU_bitserial_257 |     1|
+|764   |      register_file_inst           |Register_File_258 |     2|
+|765   |    \gen_row[9].gen_col[8].pe_i    |PE_Main_253       |     3|
+|766   |      alu_inst                     |ALU_bitserial_255 |     1|
+|767   |      register_file_inst           |Register_File_256 |     2|
+|768   |    \gen_row[9].gen_col[9].pe_i    |PE_Main_254       |     3|
+|769   |      alu_inst                     |ALU_bitserial     |     1|
+|770   |      register_file_inst           |Register_File     |     2|
+|771   |  ctrl_inst                        |Control_Unit      |  2194|
+|772   |    control_inst                   |Control_FSM       |  2194|
++------+-----------------------------------+------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 180 ; free virtual = 9866
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 69 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.297 ; gain = 922.836 ; free physical = 180 ; free virtual = 9866
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 2550.305 ; gain = 922.836 ; free physical = 180 ; free virtual = 9866
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2573.078 ; gain = 0.000 ; free physical = 324 ; free virtual = 10010
+INFO: [Netlist 29-17] Analyzing 512 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2719.629 ; gain = 0.000 ; free physical = 198 ; free virtual = 9899
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 512 instances were transformed.
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 512 instances
+
+Synth Design complete | Checksum: 281b2291
+INFO: [Common 17-83] Releasing license: Synthesis
+40 Infos, 69 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:43 . Memory (MB): peak = 2719.664 ; gain = 1092.203 ; free physical = 197 ; free virtual = 9898
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1864.198; main = 1853.028; forked = 278.987
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3478.992; main = 2719.633; forked = 1019.598
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2743.641 ; gain = 0.000 ; free physical = 195 ; free virtual = 9897
+INFO: [Common 17-1381] The checkpoint '/home/gary/Individual_Project_Vivado/Individual_Project_Vivado.runs/synth_1/Top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 16 14:07:37 2026...
